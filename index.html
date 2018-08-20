@@ -16,7 +16,7 @@
 			letter-spacing: .8px;
 		}
 		a{color: #57AF06;text-decoration: none;}
-		a:hover{color: #308600;text-decoration: underline;}
+		a:hover{color: #308600;text-decoration: underline;text-shadow: 0 0 5px #99FF66;}
 		.navbar{  }
 		.sync-content{
 			background: #FFFFFF;
@@ -44,18 +44,16 @@
 			color: #FFFFFF;
 		}
 		.sync-table{
-			/*line-height: 3;*/
 			border-collapse: collapse;
             line-height: 1.5;
 		}
 		.sync-table th{
 			border-bottom: 1px solid #AAA;
-			padding: 15px 5px;
+			vertical-align: top;
 		}
 		.sync-table th,
 		.sync-table td{
 			padding: 15px 10px;
-            vertical-align: top;
 		}
 		.sync-table tbody tr:nth-child(2n){
 			background: #F6F6F6;
@@ -65,7 +63,7 @@
             display: block;
             font-size: 12px;
             font-style: italic;
-            color: #777777;
+            color: #888888;
         }
 	</style>
 </head>
@@ -97,10 +95,10 @@
 		<table class="sync-table mb2" width="100%">
 			<thead>
 				<tr>
-					<th width="23%">Date<br>日期</th>
-					<th width="23%">Ending Height<br>结束高度</th>
-					<th width="14%">File Size<br>文件大小</th>
-					<th class="t-ri" width="40%">Download<br>下载</th>
+					<th width="25%">Date<br>日期</th>
+					<th width="27%">Ending Height<br>结束高度</th>
+					<th width="16%">File Size<br>文件大小</th>
+					<th class="t-ri" width="32%">Download<br>下载</th>
 				</tr>
 			</thead>
 			<tbody id="full"></tbody>
