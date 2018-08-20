@@ -44,22 +44,29 @@
 			color: #FFFFFF;
 		}
 		.sync-table{
-			line-height: 3;
+			/*line-height: 3;*/
 			border-collapse: collapse;
+            line-height: 1.5;
 		}
 		.sync-table th{
 			border-bottom: 1px solid #AAA;
-			line-height: 1.5;
 			padding: 15px 5px;
 		}
 		.sync-table th,
 		.sync-table td{
-			padding-left: 10px;
+			padding: 15px 10px;
+            vertical-align: top;
 		}
 		.sync-table tbody tr:nth-child(2n){
 			background: #F6F6F6;
 
 		}
+        .md5{
+            display: block;
+            font-size: 12px;
+            font-style: italic;
+            color: #777777;
+        }
 	</style>
 </head>
 <body>
@@ -90,10 +97,10 @@
 		<table class="sync-table mb2" width="100%">
 			<thead>
 				<tr>
-					<th width="30%">Date<br>日期</th>
-					<th width="30%">Ending Height<br>结束高度</th>
-					<th width="30%">File Size<br>文件大小</th>
-					<th width="10%">Download<br>下载</th>
+					<th width="23%">Date<br>日期</th>
+					<th width="23%">Ending Height<br>结束高度</th>
+					<th width="14%">File Size<br>文件大小</th>
+					<th class="t-ri" width="40%">Download<br>下载</th>
 				</tr>
 			</thead>
 			<tbody id="full"></tbody>
@@ -104,11 +111,11 @@
 		<table class="sync-table mb2" width="100%">
 			<thead>
 				<tr>
-					<th width="24%">Date<br>日期</th>
-					<th width="23%">Starting Height<br>开始高度</th>
-					<th width="23%">Ending Height<br>结束高度</th>
+					<th width="20%">Date<br>日期</th>
+					<th width="20%">Starting Height<br>开始高度</th>
+					<th width="20%">Ending Height<br>结束高度</th>
 					<th width="20%">File Size<br>文件大小</th>
-					<th width="10%">Download<br>下载</th>
+					<th class="t-ri" width="30%">Download<br>下载</th>
 				</tr>
 			</thead>
 			<tbody id="increment"></tbody>
@@ -124,7 +131,10 @@
 		<td>{{datetime}}</td>
 		<td>{{end}}</td>
 		<td>{{size}}</td>
-		<td><a href="http://testnet.japaneast.cloudapp.azure.com/{{path}}">download</a></td>
+		<td class="t-ri">
+            <a href="http://testnet.japaneast.cloudapp.azure.com/{{path}}">download</a>
+            <span class="md5">MD5:{{md5}}</span>
+        </td>
 	</tr>
 </script>
 
@@ -135,7 +145,10 @@
 		<td>{{value.start}}</td>
 		<td>{{value.end}}</td>
 		<td>{{value.size}}</td>
-		<td><a href="http://testnet.japaneast.cloudapp.azure.com/{{value.path}}">download</a></td>
+		<td class="t-ri">
+            <a href="http://testnet.japaneast.cloudapp.azure.com/{{value.path}}">download</a>
+            <span class="md5">MD5:{{value.md5}}</span>
+        </td>
 	</tr>
 	{{/each}}
 </script>
