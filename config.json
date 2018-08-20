@@ -1,0 +1,94 @@
+{
+    "mainnet": {
+        "full": {
+            "path": "mainnet/full/chain.acc.zip",
+            "size": 0,
+            "datetime": "2018/07/19",
+            "start": 0,
+            "end": 2500000
+        },
+        "increment": [
+            {
+                "path": "mainnet/increment/2M-2.1M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 2000001,
+                "end": 2500000
+            },
+            {
+                "path": "mainnet/increment/2.1M-2.2M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 2100001,
+                "end": 2500000
+            },
+            {
+                "path": "mainnet/increment/2.2M-2.3M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 2200001,
+                "end": 2500000
+            },
+            {
+                "path": "mainnet/increment/2.3M-2.4M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 2300001,
+                "end": 2500000
+            },
+            {
+                "path": "mainnet/increment/2.4M-2.5M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 2400001,
+                "end": 2500000
+            }
+        ]
+    },
+    "testnet": {
+        "full": {
+            "path": "testnet/full/chain.acc.zip",
+            "size": 0,
+            "datetime": "2018/07/19",
+            "start": 0,
+            "end": 1607690
+        },
+        "increment": [
+            {
+                "path": "testnet/increment/1.35M-1.6M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 1350001,
+                "end": 1400000
+            },
+            {
+                "path": "testnet/increment/1.4M-1.6M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 1400001,
+                "end": 1450000
+            },
+            {
+                "path": "testnet/increment/1.45M-1.6M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 1450001,
+                "end": 1500000
+            },
+            {
+                "path": "testnet/increment/1.5M-1.6M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 1500001,
+                "end": 1550000
+            },
+            {
+                "path": "testnet/increment/1.55M-1.6M/chain.acc.zip",
+                "size": 0,
+                "datetime": "2018/07/19",
+                "start": 1550001,
+                "end": 1600000
+            }
+        ]
+    }
+}

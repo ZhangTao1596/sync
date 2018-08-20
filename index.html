@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<title></title>
 	<link rel="stylesheet" href="css/common.css">
 	<style type="text/css">
@@ -18,9 +17,7 @@
 		}
 		a{color: #57AF06;text-decoration: none;}
 		a:hover{color: #308600;text-decoration: underline;}
-		.navbar{
-
-		}
+		.navbar{  }
 		.sync-content{
 			background: #FFFFFF;
 			text-align: left;
@@ -80,7 +77,7 @@
 		More info：<a class="t-green" href="http://docs.neo.org/en-us/network/syncblocks.html">http://docs.neo.org/en-us/network/syncblocks.html</a><br>
 		<div class="mt3"></div>
 		客户端运行时会自动同步区块数据，打开钱包时也会自动同步钱包数据，当同步完成后才可以正常使用客户端以及查看钱包内资产。
-		由于区块链数据庞大，初次同步时等待时间通常很久，建议采用离线同步包进行同步。<br>
+            由于区块链数据庞大，初次同步时等待时间通常很久。如果已经不是初次运行客户端，并且想快速同步到最新高度，可以直接下载最近的离线增量数据包来加速同步。<br>
 		详情：<a class="t-green" href="http://docs.neo.org/zh-cn/network/syncblocks.html">http://docs.neo.org/zh-cn/network/syncblocks.html</a><br>
 		</div>
 	</div>
@@ -144,28 +141,30 @@
 </script>
 
 </body>
-<script src="http://testnet.japaneast.cloudapp.azure.com/config.js" type="text/javascript"></script>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/template.js"></script>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="js/template.js" type="text/javascript"></script>
 <script type="text/javascript">
+
     netChange(0);
     function netChange(ele,num) {
         var html1,html2;
         num = num || 0;
-        if(!$(ele).hasClass("green")){
-            $(ele).siblings().removeClass("green");
-            $(ele).addClass("green");
-		}
-        if(num==0){
-            html1 = template('fullSync',data.mainnet.full);
-            html2 = template('incrementSync',data.mainnet);
-		}else if(num==1){
-            html1 = template('fullSync',data.testnet.full);
-            html2 = template('incrementSync',data.testnet);
-        }
+        $.get("config.json",function(data){
+            if(!$(ele).hasClass("green")){
+                $(ele).siblings().removeClass("green");
+                $(ele).addClass("green");
+            }
+            if(num==0){
+                html1 = template('fullSync',data.mainnet.full);
+                html2 = template('incrementSync',data.mainnet);
+            }else if(num==1){
+                html1 = template('fullSync',data.testnet.full);
+                html2 = template('incrementSync',data.testnet);
+            }
 
-        document.getElementById('full').innerHTML = html1;
-        document.getElementById('increment').innerHTML = html2;
+            document.getElementById('full').innerHTML = html1;
+            document.getElementById('increment').innerHTML = html2;
+        });
     }
 </script>
 </html>
