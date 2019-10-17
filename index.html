@@ -4,85 +4,25 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="css/common.css">
-	<style type="text/css">
-		body{
-			background: #EEEEEE;
-			line-height: 2.5;
-			background-image:url("images/syncbg.jpg");
-			background-position: bottom left;
-			background-size: contain;
-			background-repeat: no-repeat;
-			font-weight: 300;
-			letter-spacing: .8px;
-		}
-		a{color: #57AF06;text-decoration: none;}
-		a:hover{color: #308600;text-decoration: underline;text-shadow: 0 0 5px #99FF66;}
-		.navbar{  }
-		.sync-content{
-			background: #FFFFFF;
-			text-align: left;
-			padding: 1px 40px;
-			box-shadow: 0px 5px 10px #DDD;
-		}
-		.btn{
-			display: inline-block;
-			padding: 0 15px;
-			border: 2px solid #57AF06;
-			color: #57AF06;
-			min-width: 100px;
-			text-align: center;
-			line-height: 2;
-			margin-right: 10px;
-		}
-		.btn:hover{
-			text-decoration: none;
-			opacity: 0.9;
-		}
-		.btn.green{
-			display: inline-block;
-			background: #57AF06;
-			color: #FFFFFF;
-		}
-		.sync-table{
-			border-collapse: collapse;
-            line-height: 1.5;
-		}
-		.sync-table th{
-			border-bottom: 1px solid #AAA;
-			vertical-align: top;
-		}
-		.sync-table th,
-		.sync-table td{
-			padding: 15px 5px;
-		}
-		.sync-table tbody tr:nth-child(2n){
-			background: #F6F6F6;
-		}
-        .md5{
-            display: block;
-            font-size: 12px;
-            font-style: italic;
-            color: #888888;
-            text-transform: uppercase;
-        }
-	</style>
 </head>
 <body>
 <div class="navbar">
 	<div class="container t-le">
-		<img src="images/logo-white.svg" width="105" height="46">
+		<img class="p3" src="images/logo-white.png" width="105">
 	</div>
 </div>
 <div class="container">
 	<div class="sync-content mt1">
 		<div class="sync-tit f2 t-green mt3">Instructions 使用说明</div>
-		<div class="mt3 mb2">
+		<div class="mt4 mb2">
 		The client must be fully synchronized before use.In order to speed up network synchronization you can download an offline package of the blockchain data up to a certain block height.
 		This means the client will only need to sync the additional blocks from the NEO network rather than the entire blockchain.<br>
+		We recommond you downloading the offline package here for neo-cli and neo-gui v2.7.6 or above.<br>
 		More info：<a class="t-green" href="http://docs.neo.org/en-us/network/syncblocks.html">http://docs.neo.org/en-us/network/syncblocks.html</a><br>
-		<div class="mt3"></div>
+		<div class="mt4"></div>
 		客户端运行时会自动同步区块数据，打开钱包时也会自动同步钱包数据，当同步完成后才可以正常使用客户端以及查看钱包内资产。
-            由于区块链数据庞大，初次同步时等待时间通常很久。如果已经不是初次运行客户端，并且想快速同步到最新高度，可以直接下载最近的离线增量数据包来加速同步。<br>
+		由于区块链数据庞大，初次同步时等待时间通常很久。如果已经不是初次运行客户端，并且想快速同步到最新高度，可以直接下载最近的离线增量数据包来加速同步。<br>
+		建议2.7.6及以上版本的neo-cli和neo-gui下载本页的离线数据包进行同步。<br>
 		详情：<a class="t-green" href="http://docs.neo.org/zh-cn/network/syncblocks.html">http://docs.neo.org/zh-cn/network/syncblocks.html</a><br>
 		</div>
 	</div>
@@ -133,7 +73,7 @@
         <td>{{size}}</td>
         <td>{{time}}</td>
 		<td class="t-ri">
-            <a href="http://testnet.japaneast.cloudapp.azure.com/{{path}}">download</a>
+            <a href="{{path}}">download</a>
             <span class="md5">MD5:{{md5}}</span>
         </td>
 	</tr>
@@ -148,7 +88,7 @@
 		<td>{{value.size}}</td>
         <td>{{value.time}}</td>
 		<td class="t-ri">
-            <a href="http://testnet.japaneast.cloudapp.azure.com/{{value.path}}">download</a>
+            <a href="{{value.path}}">download</a>
             <span class="md5">MD5:{{value.md5}}</span>
         </td>
 	</tr>
