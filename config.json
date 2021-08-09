@@ -114,5 +114,121 @@
                 "md5": "f10171cbe6772f236dab3513ed6ea57a"
             }
         ]
+    },
+    "n3mainnet": {
+        "full": {
+            "path": "mainnet/full/chain.acc.zip",
+            "size": 0,
+            "time": "4h",
+            "datetime": "2018/07/19",
+            "start": 0,
+            "end": 2500000,
+            "md5": "f10171cbe6772f236dab3513ed6ea57a"
+        },
+        "increment": [
+            {
+                "path": "mainnet/increment/2M-2.1M/chain.acc.zip",
+                "size": 0,
+                "time": "30min",
+                "datetime": "2018/07/19",
+                "start": 2000001,
+                "end": 2500000,
+                "md5": "fe6dcb57ce5c29146f1b1fe44d5d1ee7"
+            },
+            {
+                "path": "mainnet/increment/2.1M-2.2M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 2100001,
+                "end": 2500000,
+                "md5": "2c9550fe4a761605657e183f7ac66fac"
+            },
+            {
+                "path": "mainnet/increment/2.2M-2.3M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 2200001,
+                "end": 2500000,
+                "md5": "6667d6c742b89a7b246dacb0a9e83867"
+            },
+            {
+                "path": "mainnet/increment/2.3M-2.4M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 2300001,
+                "end": 2500000,
+                "md5": "b0916d38190dccd4cc057afa5973fbfd"
+            },
+            {
+                "path": "mainnet/increment/2.4M-2.5M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 2400001,
+                "end": 2500000,
+                "md5": "f10171cbe6772f236dab3513ed6ea57a"
+            }
+        ]
+    },
+    "n3testnet": {
+        "full": {
+            "path": "testnet/full/chain.acc.zip",
+            "size": 0,
+            "time": "1s",
+            "datetime": "2018/07/19",
+            "start": 0,
+            "end": 1607690,
+            "md5": "f10171cbe6772f236dab3513ed6ea57a"
+        },
+        "increment": [
+            {
+                "path": "testnet/increment/1.35M-1.6M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 1350001,
+                "end": 1400000,
+                "md5": "6667d6c742b89a7b246dacb0a9e83867"
+            },
+            {
+                "path": "testnet/increment/1.4M-1.6M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 1400001,
+                "end": 1450000,
+                "md5": "b0916d38190dccd4cc057afa5973fbfd"
+            },
+            {
+                "path": "testnet/increment/1.45M-1.6M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 1450001,
+                "end": 1500000,
+                "md5": "fe6dcb57ce5c29146f1b1fe44d5d1ee7"
+            },
+            {
+                "path": "testnet/increment/1.5M-1.6M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 1500001,
+                "end": 1550000,
+                "md5": "2c9550fe4a761605657e183f7ac66fac"
+            },
+            {
+                "path": "testnet/increment/1.55M-1.6M/chain.acc.zip",
+                "size": 0,
+                "time": "1s",
+                "datetime": "2018/07/19",
+                "start": 1550001,
+                "end": 1600000,
+                "md5": "f10171cbe6772f236dab3513ed6ea57a"
+            }
+        ]
     }
 }
