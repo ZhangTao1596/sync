@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="css/common.css">
 </head>
+
 <body>
-<div class="navbar">
-	<div class="container t-le">
-		<img class="p3" src="images/logo-white.png" width="105">
-	</div>
-</div>
-<div class="container">
-	<div class="sync-content mt1">
-		<div class="sync-tit f2 t-green mt3">Instructions 使用说明</div>
-		<div class="mt4 mb2">
-		The client must be fully synchronized before use.In order to speed up network synchronization you can download an offline package of the blockchain data up to a certain block height.
-		This means the client will only need to sync the additional blocks from the NEO network rather than the entire blockchain.<br>
-		We recommond you downloading the offline package here for neo-cli and neo-gui v2.7.6 or above.<br>
-		More info：<a class="t-green" href="https://docs.neo.org/docs/en-us/node/syncblocks.html">https://docs.neo.org/docs/en-us/node/syncblocks.html</a><br>
-		<div class="mt4"></div>
-		客户端运行时会自动同步区块数据，打开钱包时也会自动同步钱包数据，当同步完成后才可以正常使用客户端以及查看钱包内资产。
-		由于区块链数据庞大，初次同步时等待时间通常很久。如果已经不是初次运行客户端，并且想快速同步到最新高度，可以直接下载最近的离线增量数据包来加速同步。<br>
-		建议2.7.6及以上版本的neo-cli和neo-gui下载本页的离线数据包进行同步。<br>
-		详情：<a class="t-green" href="https://docs.neo.org/docs/zh-cn/node/syncblocks.html">https://docs.neo.org/docs/zh-cn/node/syncblocks.html</a><br>
+	<div class="navbar">
+		<div class="container t-le">
+			<img class="p3" src="images/logo-white.png" width="105">
 		</div>
 	</div>
-	<div class="mt2">
-		<a class="btn green" onclick="netChange(this,0)">主网 Mainnet</a>
-		<a class="btn" onclick="netChange(this,1)">测试网 Testnet</a>
-	</div>
-	<div class="mt2 sync-content">
-		<div class="f2 t-green mt3">Full Offline Package 全量离线同步包</div>
-		<table class="sync-table mb2" width="100%">
-			<thead>
-				<tr>
-					<th width="18%">Date<br>日期</th>
-					<th width="18%">Ending Height<br>结束高度</th>
-                    <th width="18%">File Size<br>文件大小</th>
-                    <th width="16%">Estimate Time<br>预计时间</th>
-					<th class="t-ri" width="30%">Download<br>下载</th>
-				</tr>
-			</thead>
-			<tbody id="full"></tbody>
-		</table>
-	</div>
-	<div class="mt2 sync-content">
-		<div class="f2 t-green mt3">Increment Offline Package 增量离线同步包</div>
-		<table class="sync-table mb2" width="100%">
-			<thead>
-				<tr>
-					<th width="14%">Date<br>日期</th>
-					<th width="15%">Starting Height<br>开始高度</th>
-					<th width="15%">Ending Height<br>结束高度</th>
-					<th width="12%">File Size<br>文件大小</th>
-                    <th width="14%">Estimate Time<br>预计时间</th>
-					<th class="t-ri" width="30%">Download<br>下载</th>
-				</tr>
-			</thead>
-			<tbody id="increment"></tbody>
-		</table>
-	</div>
+	<div class="container">
+		<div class="sync-content mt1">
+			<div class="sync-tit f2 t-green mt3">Instructions 使用说明</div>
+			<div class="mt4 mb2">
+				The client must be fully synchronized before use.In order to speed up network synchronization you can
+				download an offline package of the blockchain data up to a certain block height.
+				This means the client will only need to sync the additional blocks from the NEO network rather than the
+				entire blockchain.<br>
+				We recommond you downloading the offline package here for neo-cli and neo-gui v2.7.6 or above.<br>
+				More info：<a class="t-green"
+					href="https://docs.neo.org/docs/en-us/node/syncblocks.html">https://docs.neo.org/docs/en-us/node/syncblocks.html</a><br>
+				<div class="mt4"></div>
+				客户端运行时会自动同步区块数据，打开钱包时也会自动同步钱包数据，当同步完成后才可以正常使用客户端以及查看钱包内资产。
+				由于区块链数据庞大，初次同步时等待时间通常很久。如果已经不是初次运行客户端，并且想快速同步到最新高度，可以直接下载最近的离线增量数据包来加速同步。<br>
+				建议2.7.6及以上版本的neo-cli和neo-gui下载本页的离线数据包进行同步。<br>
+				详情：<a class="t-green"
+					href="https://docs.neo.org/docs/zh-cn/node/syncblocks.html">https://docs.neo.org/docs/zh-cn/node/syncblocks.html</a><br>
+			</div>
+		</div>
+		<div class="mt2">
+			<a class="btn green" onclick="netChange(this,0)">主网 Mainnet</a>
+			<a class="btn" onclick="netChange(this,1)">测试网 Testnet</a>
+		</div>
+		<div class="mt2 sync-content">
+			<div class="f2 t-green mt3">Full Offline Package 全量离线同步包</div>
+			<table class="sync-table mb2" width="100%">
+				<thead>
+					<tr>
+						<th width="18%">Date<br>日期</th>
+						<th width="18%">Ending Height<br>结束高度</th>
+						<th width="18%">File Size<br>文件大小</th>
+						<th width="16%">Estimate Time<br>预计时间</th>
+						<th class="t-ri" width="30%">Download<br>下载</th>
+					</tr>
+				</thead>
+				<tbody id="full"></tbody>
+			</table>
+		</div>
+		<div class="mt2 sync-content">
+			<div class="f2 t-green mt3">Increment Offline Package 增量离线同步包</div>
+			<table class="sync-table mb2" width="100%">
+				<thead>
+					<tr>
+						<th width="14%">Date<br>日期</th>
+						<th width="15%">Starting Height<br>开始高度</th>
+						<th width="15%">Ending Height<br>结束高度</th>
+						<th width="12%">File Size<br>文件大小</th>
+						<th width="14%">Estimate Time<br>预计时间</th>
+						<th class="t-ri" width="30%">Download<br>下载</th>
+					</tr>
+				</thead>
+				<tbody id="increment"></tbody>
+			</table>
+		</div>
 
-	<div class="mt1 mb1 t-ce">
-		<img src="images/logo.svg" width="114" height="50">
+		<div class="mt1 mb1 t-ce">
+			<img src="images/logo.svg" width="114" height="50">
+		</div>
 	</div>
-</div>
-<script id="fullSync" type="text/html">
+	<script id="fullSync" type="text/html">
 	<tr>
 		<td>{{datetime}}</td>
 		<td>{{end}}</td>
@@ -79,7 +85,7 @@
 	</tr>
 </script>
 
-<script id="incrementSync" type="text/html">
+	<script id="incrementSync" type="text/html">
 	{{each increment value i}}
 	<tr>
 		<td>{{value.datetime}}</td>
@@ -100,26 +106,27 @@
 <script src="js/template.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-    netChange(0);
-    function netChange(ele,num) {
-        var html1,html2;
-        num = num || 0;
-        $.get("config.json",function(data){
-            if(!$(ele).hasClass("green")){
-                $(ele).siblings().removeClass("green");
-                $(ele).addClass("green");
-            }
-            if(num==0){
-                html1 = template('fullSync',data.mainnet.full);
-                html2 = template('incrementSync',data.mainnet);
-            }else if(num==1){
-                html1 = template('fullSync',data.testnet.full);
-                html2 = template('incrementSync',data.testnet);
-            }
+	netChange(0);
+	function netChange(ele, num) {
+		var html1, html2;
+		num = num || 0;
+		$.get("config.json", function (data) {
+			if (!$(ele).hasClass("green")) {
+				$(ele).siblings().removeClass("green");
+				$(ele).addClass("green");
+			}
+			if (num == 0) {
+				html1 = template('fullSync', data.mainnet.full);
+				html2 = template('incrementSync', data.mainnet);
+			} else if (num == 1) {
+				html1 = template('fullSync', data.testnet.full);
+				html2 = template('incrementSync', data.testnet);
+			}
 
-            document.getElementById('full').innerHTML = html1;
-            document.getElementById('increment').innerHTML = html2;
-        });
-    }
+			document.getElementById('full').innerHTML = html1;
+			document.getElementById('increment').innerHTML = html2;
+		});
+	}
 </script>
+
 </html>
