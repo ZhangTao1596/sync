@@ -117,18 +117,35 @@
 				$(ele).siblings().removeClass("green");
 				$(ele).addClass("green");
 			}
+			var empty = { full: {}, increment: [] };
 			if (num == 0) {
-				html1 = template('fullSync', data.mainnet.full);
-				html2 = template('incrementSync', data.mainnet);
+				var mainnet = data.mainnet;
+				if (!mainnet) {
+					mainnet = empty;
+				}
+				html1 = template('fullSync', mainnet.full);
+				html2 = template('incrementSync', mainnet);
 			} else if (num == 1) {
-				html1 = template('fullSync', data.testnet.full);
-				html2 = template('incrementSync', data.testnet);
+				var testnet = data.testnet
+				if (!testnet) {
+					testnet = empty;
+				}
+				html1 = template('fullSync', testnet.full);
+				html2 = template('incrementSync', testnet);
 			} else if (num == 2) {
-				html1 = template('fullSync', data.n3mainnet.full);
-				html2 = template('incrementSync', data.n3mainnet);
+				var n3m = data.n3mainnet
+				if (!n3m) {
+					n3m = empty;
+				}
+				html1 = template('fullSync', n3m.full);
+				html2 = template('incrementSync', n3m);
 			} else if (num == 3) {
-				html1 = template('fullSync', data.n3testnet.full);
-				html2 = template('incrementSync', data.n3testnet);
+				var n3t = data.n3testnet
+				if (!n3t) {
+					n3t = empty;
+				}
+				html1 = template('fullSync', n3t.full);
+				html2 = template('incrementSync', n3t);
 			}
 
 			document.getElementById('full').innerHTML = html1;
